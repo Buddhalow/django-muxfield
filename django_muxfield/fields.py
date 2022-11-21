@@ -27,7 +27,6 @@ except ImportError:
 from django import forms
 from django.core import checks
 from django.db import models
-from django.utils.translation import ugettext_lazy as _
 from django.conf import settings
 import time
 import mux_python
@@ -50,10 +49,7 @@ uploads_api = mux_python.DirectUploadsApi(mux_python.ApiClient(configuration))
 
 class MuxField(models.FileField):
     default_error_messages = {
-        'invalid_video': _(
-            'Upload a valid video. The file you uploaded was either not an '
-            'video or a corrupted video.'
-        )
+        'invalid_video': 'Upload a valid video. The file you uploaded was either not a video or a corrupted video.'
     }
 
     def to_python(self, data):
