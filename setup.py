@@ -70,6 +70,6 @@ setup(
     keywords='django video model field mux.com mp4',
     install_requires=['Django >= 3.1', 'mux_python'],
     tests_require=['Django >= 1.8', 'mux_python'],
-    packages=['muxfield'],
+    packages=['django_muxfield'],
     cmdclass={'test': TestCommand}
 )
