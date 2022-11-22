@@ -47,7 +47,8 @@ playback_ids_api = mux_python.PlaybackIDApi(mux_python.ApiClient(configuration))
 uploads_api = mux_python.DirectUploadsApi(mux_python.ApiClient(configuration))
 
 
-class MuxField(models.FileField):
+class MuxField(models.URLField):
+    widget = MuxInput
     default_error_messages = {
         'invalid_video': 'Upload a valid video. The file you uploaded was either not a video or a corrupted video.'
     }
